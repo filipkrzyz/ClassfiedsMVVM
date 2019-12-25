@@ -10,9 +10,7 @@
 		DC13982A23B3EC0C0051DF12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13982923B3EC0C0051DF12 /* AppDelegate.swift */; };
 		DC13982C23B3EC0C0051DF12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13982B23B3EC0C0051DF12 /* SceneDelegate.swift */; };
 		DC13982E23B3EC0C0051DF12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13982D23B3EC0C0051DF12 /* ViewController.swift */; };
-		DC13983123B3EC0C0051DF12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC13982F23B3EC0C0051DF12 /* Main.storyboard */; };
 		DC13983323B3EC0D0051DF12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC13983223B3EC0D0051DF12 /* Assets.xcassets */; };
-		DC13983623B3EC0D0051DF12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC13983423B3EC0D0051DF12 /* LaunchScreen.storyboard */; };
 		DC13984123B3EC0D0051DF12 /* ClassfiedsMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13984023B3EC0D0051DF12 /* ClassfiedsMVVMTests.swift */; };
 		DC13984C23B3EC0D0051DF12 /* ClassfiedsMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13984B23B3EC0D0051DF12 /* ClassfiedsMVVMUITests.swift */; };
 /* End PBXBuildFile section */
@@ -39,9 +37,7 @@
 		DC13982923B3EC0C0051DF12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC13982B23B3EC0C0051DF12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DC13982D23B3EC0C0051DF12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DC13983023B3EC0C0051DF12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC13983223B3EC0D0051DF12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DC13983523B3EC0D0051DF12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC13983723B3EC0D0051DF12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC13983C23B3EC0D0051DF12 /* ClassfiedsMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassfiedsMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC13984023B3EC0D0051DF12 /* ClassfiedsMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassfiedsMVVMTests.swift; sourceTree = "<group>"; };
@@ -99,13 +95,11 @@
 		DC13982823B3EC0C0051DF12 /* ClassfiedsMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				DC13982923B3EC0C0051DF12 /* AppDelegate.swift */,
-				DC13982B23B3EC0C0051DF12 /* SceneDelegate.swift */,
-				DC13982D23B3EC0C0051DF12 /* ViewController.swift */,
-				DC13982F23B3EC0C0051DF12 /* Main.storyboard */,
-				DC13983223B3EC0D0051DF12 /* Assets.xcassets */,
-				DC13983423B3EC0D0051DF12 /* LaunchScreen.storyboard */,
-				DC13983723B3EC0D0051DF12 /* Info.plist */,
+				DC13985923B3EC4D0051DF12 /* Application */,
+				DC13985B23B3EC6E0051DF12 /* Presentation */,
+				DC13985C23B3EC970051DF12 /* Data */,
+				DC13985D23B3ECB60051DF12 /* Resources */,
+				DC13985E23B3ECBD0051DF12 /* Infrastructure */,
 			);
 			path = ClassfiedsMVVM;
 			sourceTree = "<group>";
@@ -126,6 +120,54 @@
 				DC13984D23B3EC0D0051DF12 /* Info.plist */,
 			);
 			path = ClassfiedsMVVMUITests;
+			sourceTree = "<group>";
+		};
+		DC13985923B3EC4D0051DF12 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DC13985A23B3EC620051DF12 /* Domain */,
+				DC13982923B3EC0C0051DF12 /* AppDelegate.swift */,
+				DC13982B23B3EC0C0051DF12 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DC13985A23B3EC620051DF12 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DC13985B23B3EC6E0051DF12 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DC13982D23B3EC0C0051DF12 /* ViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DC13985C23B3EC970051DF12 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DC13985D23B3ECB60051DF12 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DC13983223B3EC0D0051DF12 /* Assets.xcassets */,
+				DC13983723B3EC0D0051DF12 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DC13985E23B3ECBD0051DF12 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC13983623B3EC0D0051DF12 /* LaunchScreen.storyboard in Resources */,
 				DC13983323B3EC0D0051DF12 /* Assets.xcassets in Resources */,
-				DC13983123B3EC0C0051DF12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +335,6 @@
 			targetProxy = DC13984823B3EC0D0051DF12 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		DC13982F23B3EC0C0051DF12 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC13983023B3EC0C0051DF12 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DC13983423B3EC0D0051DF12 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC13983523B3EC0D0051DF12 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DC13984E23B3EC0D0051DF12 /* Debug */ = {
