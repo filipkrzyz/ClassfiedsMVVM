@@ -10,6 +10,8 @@ import UIKit
 
 class WelcomeVC: UIViewController {
 
+    var welcomeViewModel = WelcomeViewModel()
+    
     let welcomeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -55,26 +57,15 @@ class WelcomeVC: UIViewController {
         
         view.addConstraintWithFormat(format: "V:|-110-[v0(60)]-60-[v1(250)]-50-[v2(50)]", views: welcomeLabel, favCategoryImageView, showCategoriesButton)
         
-        fetchFavCategory()
+        loadFavCategoryImage()
     }
     
-    /// Checks for a favouriteCategory in UserDefaults and requests the image data for this category from the pixbay rest API and then loads this image using URL string to the imageView
-    func fetchFavCategory() {
-        guard let favCategoryName = UserDefaults.standard.string(forKey: "favouriteCategory") else { print("No favourite category found")
-            return
-        }
-        print("Fav Category: \(favCategoryName)")
+    func loadFavCategoryImage() {
+        welcomeViewModel.fetchFavCategory()
         
-        let apiRequest = APIRequest(query: favCategoryName, perPage: "3")
-        
-        apiRequest.getImages() { result in
-            switch result {
-            case .failure(let error):
-                print(error)
-            case .success(let imagesData):
-                DispatchQueue.main.async {
-                    self.favCategoryImageView.loadImageUsingUrlString(urlString: imagesData[0].webformatURL)
-                }
+        welcomeViewModel.imageStringURL.bind { [unowned self] in
+            if $0 != nil {
+                self.favCategoryImageView.loadImageUsingUrlString(urlString: $0!)
             }
         }
     }

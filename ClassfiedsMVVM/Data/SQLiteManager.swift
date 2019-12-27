@@ -133,7 +133,7 @@ class SQLiteManager {
         
         if sqlite3_prepare_v2(sqliteDB, updateStatementString, -1, &updateStatement, nil) == SQLITE_OK {
             if sqlite3_step(updateStatement) == SQLITE_DONE {
-                print("Successfully updated clicks.")
+                print("Successfully updated clicks for id=\(id) and clicks=\(clicks)")
             } else {
                 print("Could not update clicks.")
             }

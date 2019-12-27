@@ -24,6 +24,10 @@
 		DC13987623B4E87B0051DF12 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13987523B4E87B0051DF12 /* Extensions.swift */; };
 		DC13987823B4E8B80051DF12 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13987723B4E8B80051DF12 /* SQLiteManager.swift */; };
 		DC13987A23B4E9C60051DF12 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13987923B4E9C60051DF12 /* APIRequest.swift */; };
+		DC13987C23B4EBCB0051DF12 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13987B23B4EBCB0051DF12 /* WelcomeViewModel.swift */; };
+		DC13987E23B4EFEC0051DF12 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13987D23B4EFEC0051DF12 /* Box.swift */; };
+		DC13988023B4FAFC0051DF12 /* CustomImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13987F23B4FAFC0051DF12 /* CustomImageViewModel.swift */; };
+		DC13988223B53AF30051DF12 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC13988123B53AF30051DF12 /* CategoriesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		DC13987523B4E87B0051DF12 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DC13987723B4E8B80051DF12 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		DC13987923B4E9C60051DF12 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		DC13987B23B4EBCB0051DF12 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		DC13987D23B4EFEC0051DF12 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		DC13987F23B4FAFC0051DF12 /* CustomImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageViewModel.swift; sourceTree = "<group>"; };
+		DC13988123B53AF30051DF12 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,12 +175,12 @@
 		DC13985B23B3EC6E0051DF12 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				DC13986823B4E64D0051DF12 /* WelcomeVC.swift */,
-				DC13986A23B4E6850051DF12 /* CategoriesVC.swift */,
-				DC13986C23B4E6AA0051DF12 /* ImagesVC.swift */,
-				DC13986E23B4E6CD0051DF12 /* DetailsVC.swift */,
-				DC13987023B4E7C70051DF12 /* CustomImageView.swift */,
-				DC13987223B4E7F10051DF12 /* CustomCell.swift */,
+				DC13988323B53B310051DF12 /* Welcome */,
+				DC13988823B53B700051DF12 /* Categories */,
+				DC13988723B53B5C0051DF12 /* Images */,
+				DC13988623B53B4E0051DF12 /* Details */,
+				DC13988523B53B400051DF12 /* ImageView */,
+				DC13988423B53B390051DF12 /* Cell */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -215,8 +223,60 @@
 			isa = PBXGroup;
 			children = (
 				DC13987523B4E87B0051DF12 /* Extensions.swift */,
+				DC13987D23B4EFEC0051DF12 /* Box.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DC13988323B53B310051DF12 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				DC13986823B4E64D0051DF12 /* WelcomeVC.swift */,
+				DC13987B23B4EBCB0051DF12 /* WelcomeViewModel.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		DC13988423B53B390051DF12 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DC13987223B4E7F10051DF12 /* CustomCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DC13988523B53B400051DF12 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				DC13987023B4E7C70051DF12 /* CustomImageView.swift */,
+				DC13987F23B4FAFC0051DF12 /* CustomImageViewModel.swift */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
+		DC13988623B53B4E0051DF12 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				DC13986E23B4E6CD0051DF12 /* DetailsVC.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		DC13988723B53B5C0051DF12 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DC13986C23B4E6AA0051DF12 /* ImagesVC.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		DC13988823B53B700051DF12 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DC13986A23B4E6850051DF12 /* CategoriesVC.swift */,
+				DC13988123B53AF30051DF12 /* CategoriesViewModel.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,16 +412,20 @@
 				DC13986D23B4E6AA0051DF12 /* ImagesVC.swift in Sources */,
 				DC13987123B4E7C70051DF12 /* CustomImageView.swift in Sources */,
 				DC13987A23B4E9C60051DF12 /* APIRequest.swift in Sources */,
+				DC13987C23B4EBCB0051DF12 /* WelcomeViewModel.swift in Sources */,
 				DC13987323B4E7F10051DF12 /* CustomCell.swift in Sources */,
 				DC13987823B4E8B80051DF12 /* SQLiteManager.swift in Sources */,
 				DC13986623B4E5B70051DF12 /* JsonModel.swift in Sources */,
 				DC13982A23B3EC0C0051DF12 /* AppDelegate.swift in Sources */,
 				DC13986F23B4E6CD0051DF12 /* DetailsVC.swift in Sources */,
+				DC13987E23B4EFEC0051DF12 /* Box.swift in Sources */,
+				DC13988223B53AF30051DF12 /* CategoriesViewModel.swift in Sources */,
 				DC13986923B4E64D0051DF12 /* WelcomeVC.swift in Sources */,
 				DC13982C23B3EC0C0051DF12 /* SceneDelegate.swift in Sources */,
 				DC13986423B4E5440051DF12 /* Category.swift in Sources */,
 				DC13987623B4E87B0051DF12 /* Extensions.swift in Sources */,
 				DC13986B23B4E6850051DF12 /* CategoriesVC.swift in Sources */,
+				DC13988023B4FAFC0051DF12 /* CustomImageViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
